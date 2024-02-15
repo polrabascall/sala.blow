@@ -5,10 +5,10 @@ import Scroll from '../components/Scroll.astro';
   <div class="w-full h-screen relative" id="marco1">
     <div class="relative" id="marco" class="w-full">
       <div class="w-full relative" id="marcoIMG">
-        <img class="w-full h-auto" src="/blow.svg" />
+        <img class="w-full h-auto" src="/blow.svg"/>
         <img
           id="blur"
-          class="absolute -bottom-4 blur-3xl -z-40 opacity-99 transition-opacity duration-1000"
+          class="absolute -bottom-4 blur-3xl -z-40 opacity-99 transition-opacity duration-1000  animate-pulse animate-duration-1000 "
           src="/blow.svg"
           onload="document.getElementById('blur').classList.add('opacity-0')"
         />
@@ -17,11 +17,11 @@ import Scroll from '../components/Scroll.astro';
     </div>
   </div>
 
-  <div class="separador1">
+  <div class="separador1" >
     <h1>hello</h1>
   </div>
 </div>
-<br><br>funciona se ponen las cosas 
+<br><br>
 
 <style>
   #marco1 {
@@ -55,4 +55,22 @@ import Scroll from '../components/Scroll.astro';
       width: 100%;
     }
   }
+
+  @keyframes pulse {
+    50% {
+        opacity: .5;
+    }
+  }
+  .animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) 3;
+  }
+
+  /* @keyframes pulse {
+    50% {
+        opacity: .5;
+    }
+}
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+} */
 </style>
