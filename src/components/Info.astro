@@ -12,8 +12,17 @@
         />
 
         <h1 class="text-5xl font-semibold text-center text-wrap mx-auto mb-10 tracking-wide animate-jump" id="info_h1">
-            Bienbenidos/as<br />a la Sala Blow
+            Bienvenidos/as<br />a la Sala Blow
         </h1>
+        <div id="info_parrafo" class="animate-spin">
+        <p >
+            Bienvenidos a todos a una nueva manera de ver las fiestas, las discotecas y la propia vida de la noche para los que amamos el rap.
+
+            La iniciativa Blow propone crear una discoteca donde poder ir sin ninguna restricción social, a disfrutar de esa música que solo escuchas tú y que nunca se deja ver por las discotecas convencionales.
+
+            Primera edición 16.03.24
+        </p>
+        </div>
     </section>
 </div>
 
@@ -37,6 +46,12 @@
         font-weight: 400;
         font-style: normal;
     }
+    #info_parrafo{
+        color: azure;
+        font-family: "Rubik Spray Paint", system-ui;
+        font-weight: 400;
+        font-style: normal;
+    }
 
     @keyframes pulse {
         5% {
@@ -54,5 +69,13 @@
     }
     .animate-ping {
         animation: ping 1s cubic-bezier(0, 0, 0.2, 1) 2;
+    }
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    .animate-spin {
+        animation: spin 1s linear 1;
     }
 </style>

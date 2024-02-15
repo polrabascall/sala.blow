@@ -27,6 +27,28 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
+
+<script>
+	document.getElementById('id_scroll_b').addEventListener('click', function (event) {
+		event.preventDefault();
+		var infoParrafo = document.getElementById('info_parrafo');
+
+		// Remover la clase si ya está presente
+		if (infoParrafo.classList.contains('animate-spin')) {
+			infoParrafo.classList.remove('animate-spin');
+		}
+
+		// Agregar la clase para activar la animación
+		infoParrafo.classList.add('animate-spin');
+
+		// Redirigir a la URL especificada en el atributo href sin cambiar la ubicación de la página actual
+		setTimeout(function () {
+			window.location.replace(document.getElementById('id_scroll_b').getAttribute('href'));
+		}, 1000); // Cambia 1000 a la duración de tu animación en milisegundos
+	});
+</script>
+
+
 <style is:global>
 	:root {
 		--accent: 136, 58, 234;
