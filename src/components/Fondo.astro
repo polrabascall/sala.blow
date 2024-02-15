@@ -1,20 +1,35 @@
 ---
 import Scroll from '../components/Scroll.astro';
 ---
-<div class="relative" id="marco">
-  <div class="w-full relative" id="marcoIMG">
-    <img class="w-full h-auto" src="/blow.svg" />
-    <img
-      id="blur"
-      class="w-full absolute -bottom-4 blur-3xl -z-40 opacity-99 transition-opacity duration-1000"
-      src="/blow.svg"
-      onload="document.getElementById('blur').classList.add('opacity-0')"
-    />
+<div class="w-full h-screen relative" id="marco1s">
+  <div class="w-full h-screen relative" id="marco1">
+    <div class="relative" id="marco" class="w-full">
+      <div class="w-full relative" id="marcoIMG">
+        <img class="w-full h-auto" src="/blow.svg" />
+        <img
+          id="blur"
+          class="absolute -bottom-4 blur-3xl -z-40 opacity-99 transition-opacity duration-1000"
+          src="/blow.svg"
+          onload="document.getElementById('blur').classList.add('opacity-0')"
+        />
+      </div>
+      <Scroll />
+    </div>
   </div>
-  <Scroll />
+
+  <div class="separador1">
+    <h1>hello</h1>
+  </div>
 </div>
+<br><br>funciona se ponen las cosas 
 
 <style>
+  #marco1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   #marco {
     width: 55%;
     display: flex;
@@ -23,8 +38,16 @@ import Scroll from '../components/Scroll.astro';
     align-items: center;
   }
 
-  #marcoIMG{
+  #marcoIMG {
     width: 80%;
+  }
+
+  .separador1 {
+    display: flex;
+  }
+
+  h1{
+    color: azure;
   }
 
   @media (max-width: 640px) {
