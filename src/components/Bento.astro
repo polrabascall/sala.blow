@@ -1,10 +1,41 @@
 ---
 import Bentoitem from "./Bentoitem.astro";
 ---
-
+ 
 <section
-class="
-w-full max-w-[1400px] grid grid-cols-10 auto-rows-[35rem] mx-auto p-20">
+class={`
+    w-full max-w-[1400px] 
+    grid grid-cols-10 auto-rows-[25rem] gap-4 
+    mx-auto p-20
+    `}
+    >
 
-    <Bentoitem title="Sala Blow" subtitle="HOLA"/>
+    <Bentoitem class="col-span-10 md:col-span-4 hover:animate-" title="Sala Blow" subtitle="HOLA">
+        
+        <div 
+            slot="bento_img"
+            class="absolute left-0 top-0 bottom-0 object-cover"
+            style="background-image: url('/blow');"
+            ></div>
+
+        <p slot="bento_content" class="max-w-x text-justify" id="bento_p">
+            Bienvenidos a todos a una nueva manera de ver las fiestas, las discotecas y la propia vida de la noche para los que amamos el rap.
+            La iniciativa Blow propone crear una discoteca donde poder ir sin ninguna restricción social, a disfrutar de esa música que solo escuchas tú y que nunca se deja ver por las discotecas convencionales.
+            Primera edición 16.03.24
+        </p>
+    </Bentoitem>
+    <Bentoitem class="col-span-10 md:col-span-4" title="Sala Blow" subtitle="HOLA"></Bentoitem>
+    <Bentoitem class="col-span-10 md:col-span-6" title="Sala Blow" subtitle="HOLA"></Bentoitem>
 </section>
+
+<style>
+    p#bento_p{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    #bento_marco{
+        background-color: antiquewhite;
+    }
+    
+</style>

@@ -3,11 +3,26 @@ interface Props{
     class?:string
     title:string
     subtitle?:string
-}
+} 
 
 const {title, subtitle}=Astro.props;
 ---
-<article class={'${Astro.props.class reltive rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10'}>
-    <h2>{title}</h2>
-    {subtitle && <h3>{subtitle}</h3>}
+<article id="bento_marco" class={`${Astro.props.class} col-span-5 reltive rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10`}>
+    
+    <slot name="bento_img"></slot>
+
+    <div class="select-none flex flex-col gap-1 p-6 text-lg z-20">
+        <h2 class="text-3xl font-semibold text-balance text-white">{title}</h2>
+        {subtitle && <h3>{subtitle}</h3>}
+    </div>
+    <slot name="bento_content"></slot>
 </article>
+
+<!-- <style>
+    #bento_marco{
+        background-color: rgba(17, 0, 255, 0.0025);
+    }
+    #bento_marco:hover{
+        background-color: rgba(17, 0, 255, 0.05);
+    }
+</style> -->
