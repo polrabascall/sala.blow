@@ -1,5 +1,6 @@
 ---
 import Bentoitem from "./Bentoitem.astro";
+import Bentoitem_tiket from "./Bentoitem_tiket.astro";
 ---
   
 <section
@@ -24,8 +25,15 @@ class={`
             Primera edición 16.03.24
         </p>
     </Bentoitem>
-    <Bentoitem class="col-span-10 md:col-span-4" title="Sala Blow" subtitle="HOLA"></Bentoitem>
-    <Bentoitem class="col-span-10 md:col-span-6" title="Sala Blow" subtitle="HOLA"></Bentoitem>
+    <Bentoitem class="col-span-10 md:col-span-4" title="Sala Blow" subtitle="HOLA">
+        <div 
+            slot="bento_img"
+            class="absolute left-0 top-0 bottom-0 h-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat -z-10"
+            style="background-image: url('/images/sala1.jpg'); background-size: cover; height: 100%; width: 100%"
+            >
+        </div>
+    </Bentoitem>
+    <Bentoitem_tiket class="col-span-10 md:col-span-8" title="Tikets" subtitle="Compra tus  entradas aquí" ></Bentoitem_tiket>
 </section>
 
 <style>
@@ -36,6 +44,12 @@ class={`
 
     #bento_marco{
         background-color: antiquewhite;
+    }
+    #bento_p{
+        color: aqua;
+        font-family: "Rubik Spray Paint", system-ui;
+        font-weight: 400;
+        font-style: normal;
     }
     
 </style>
