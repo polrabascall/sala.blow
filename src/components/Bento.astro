@@ -33,7 +33,9 @@ class={`
             >
         </div>
     </Bentoitem>
-    <Bentoitem_tiket class="col-span-10 md:col-span-8" title="Tikets" subtitle="Compra tus  entradas aquí" ></Bentoitem_tiket>
+    
+    <Bentoitem_tiket class="col-span-10 md:col-span-8" title="Tickets" subtitle="Compra tus  entradas aquí" href="ticket0"></Bentoitem_tiket>
+    
 </section>
 
 <style>
@@ -50,6 +52,16 @@ class={`
         font-family: "Rubik Spray Paint", system-ui;
         font-weight: 400;
         font-style: normal;
+    }
+    @media (min-width: 768px) {
+        .md\:col-span-888 {
+            grid-column: span 8 / span 8;
+            max-height: 100px;
+        }
+    }
+    #tickets_marco{
+        max-height: 500px;
+        
     }
     
 </style>

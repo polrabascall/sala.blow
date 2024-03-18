@@ -3,17 +3,15 @@ interface Props{
     class?:string
     title:string
     subtitle?:string
-    href:string
 } 
 
-const {title, subtitle, href}=Astro.props;
+const {title, subtitle}=Astro.props;
 ---
 
 <article id="bento_marco" class={`${Astro.props.class} col-span-5 reltive rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10 group`}>
-    <a href={href}>
     <div class="absolute z-10 bottom-0 top-0 w-full h-full bg-gradient-to-b from-transparent via-black/20 to-black/80"></div>
     <slot name="bento_img" />
-    </a>
+    
     <div class="relative select-none flex flex-col gap-1 p-6 text-lg z-20 justify-end">
         <h2 class="text-3xl font-semibold text-balance text-white">{title}</h2>
         {subtitle && <h3>{subtitle}</h3>}
