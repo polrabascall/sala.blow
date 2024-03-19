@@ -1,18 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
 
 ---
 <Layout title="Welcome Sala Blow.">
+    <Header />
     <div></div>
     <section
     class={`
-        w-full max-w-[1400px] 
+        w-full max-w-[1400px] h-screen max-h-[700px]
         grid grid-cols-1 auto-rows-[25rem] gap-4 
         mx-auto p-20
         `}>
         
-    <iframe src="https://venta.enterticket.es/buy/?id=34794" id="etktfrm34794" width="100%" frameBorder="0"></iframe><script type="text/javascript" src="https://d31tcnbxvxtafg.cloudfront.net/js/libraries/buy.js"></script>
-        
+        <iframe src="https://venta.enterticket.es/client-events.php?id=19798&theme=light&color=ff00d0" id="etktfrm19798" width="100%" frameBorder="0"></iframe><script type="text/javascript" src="https://d31tcnbxvxtafg.cloudfront.net/js/libraries/buy.js"></script>        
     </section>
     
 </Layout>
