@@ -15,13 +15,22 @@ const {title, subtitle, href}=Astro.props;
         {subtitle && <h3>{subtitle}</h3>} -->
     </article> -->
 <article id="bento_marco" tickets_marco class={`${Astro.props.class} h- col-span-5 reltive rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10 group`}style="margin-top: px;">
-    
-    <article id="" id="tickets_marco" class={`${Astro.props.class} col-span-5 md:col-span-888 reltive p-5 rounded-xl backdrop-blur-md border border-black/10 shadow-inner bg-slate-800/20 shadow-white/10 group`}>
-        <!-- <h2 class="text-3xl font-semibold text-balance text-white">Tickets</h2>
-        <h3 id="tickets_subtitle">Compra tus  entradas aquí</h3> -->
-        <h2 class="text-3xl font-semibold text-balance text-white">{title}</h2>
-        {subtitle && <h3>{subtitle}</h3>}
+
+    <article id="tickets_marco" class={`${Astro.props.class} grid-cols-10 col-span-5 md:col-span-888 relative p-5 rounded-xl backdrop-blur-md border border-black/10 shadow-inner bg-slate-800/20 shadow-white/10 group`} style="display: grid;">
+        <div class="flex items-center col-span-12" >
+            <div class="left-0" id="tikets_txt">
+                <h2 class="text-3xl font-semibold text-balance text-white">{title}</h2>
+                {subtitle && <h3>{subtitle}</h3>}
+            </div>
+            <div class=""></div>
+            <div class="">
+                <a href="#" class="ml-auto"><svg class="text-purple-600 "  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg></a>
+            </div>
+        </div>
     </article>
+    
+    
+
         
     <div class=" absolute z-10 bottom-0 top-0 w-full h-full bg-gradient-to-b from-transparent via-black/20 to-black/80"></div>
     <slot name="bento_img" />
@@ -45,7 +54,10 @@ const {title, subtitle, href}=Astro.props;
 
 <style>
     #bento_marco{
-        height: 475px;
+        height: 575px;
+    }
+    #tikets_txt{
+        width: 700px;
     }
 </style>
 
